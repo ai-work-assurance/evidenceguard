@@ -66,6 +66,12 @@ Exact discovery and installation conventions vary by tool and version. The porta
 
 Google ended consumer-account access to Gemini CLI through **Sign in with Google** on 18 June 2026 and directs those users to Antigravity CLI. Gemini CLI remains available in supported Standard, Enterprise, Google Cloud, Vertex AI, or API-key-backed configurations. See Google's [deprecation notice](https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals) and [transition announcement](https://developers.googleblog.com/en/an-important-update-transitioning-gemini-cli-to-antigravity-cli/).
 
+## Compatibility and validation
+
+The five bundled benchmark cases have been exercised on Claude Code Max, Codex CLI, and Antigravity CLI. These checks demonstrate portable use of the file-based contract; they do not guarantee identical wording or findings across models and versions.
+
+For Antigravity CLI headless use, grant `read_file` access to the exact files required by the audit and run benchmark cases sequentially when using limited quota. Parallel or multi-case runs may encounter capacity limits or orchestration timeouts even when single-case reasoning succeeds.
+
 ## Output at a glance
 
 An audit identifies each material factual claim, records its support status, links it to evidence, and reports any integrity findings. Each finding includes a type, severity, explanation, evidence basis, and a concrete remediation. Global limitations and escalation needs are reported separately.

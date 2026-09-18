@@ -80,6 +80,7 @@ When evidence is inaccessible, truncated, ambiguous, contradictory, or outside t
    - `unsupported`: no supplied evidence supports the material claim, or supplied evidence materially contradicts it;
    - `indeterminate`: access, context, authority, or ambiguity prevents a responsible assessment.
    Assess the smallest independently meaningful claim unit where practical. If a compound claim remains combined, use `partially_supported` only when at least one material proposition is directly supported. A matching topic or number does not constitute partial support when the evidence has the wrong role—for example, a forecast does not partially support an assertion that the result was achieved. Reserve `indeterminate` for cases where a responsible support judgment cannot be made; do not use it merely because an accessible source is stale, narrow, or insufficient when that mismatch can itself be assessed.
+   When correctly-role evidence directly supports the same proposition for a narrower population or earlier period, preserve that bounded support as `partially_supported` if it remains a material part of the claim. Do not let staleness or scope mismatch erase genuine historical or subgroup support; instead, record the mismatch as a finding. Use `unsupported` when no material proposition is supported, the evidence materially contradicts the claim, or the evidence has the wrong role.
 5. **Run the seven integrity checks.** Assess every material claim for:
    - `unsupported_factual_claim`;
    - `partial_support`;
@@ -88,7 +89,7 @@ When evidence is inaccessible, truncated, ambiguous, contradictory, or outside t
    - `causal_overclaim`;
    - `numeric_inconsistency`; and
    - `unclear_population_or_timeframe`.
-6. **Calibrate findings.** Use `error` for an integrity problem that materially changes or invalidates the claim; `warning` for a meaningful limitation that can mislead or weaken use; and `info` for a clarification that improves traceability without presently changing the conclusion.
+6. **Calibrate findings.** Use `error` for an integrity problem that materially changes or invalidates the claim; `warning` for a meaningful limitation that can mislead or weaken use; and `info` for a clarification that improves traceability without presently changing the conclusion. Prefer the most specific finding type for each defect. Add another type only when it identifies a distinct unsupported proposition, evidence mismatch, or remediation; do not relabel the same defect merely to increase coverage.
 7. **Recommend bounded remediation.** For each finding, specify the smallest useful action: narrow or qualify the claim, correct the number, clarify population/timeframe, replace the citation, add the missing evidence, update the source, or escalate for specialist judgment.
 8. **Return the audit.** Conform to `schemas/claim_evidence.schema.json`. Separate claim-level results from overall limitations and escalation needs. If a human-readable summary is requested, derive it from the structured findings rather than adding unsupported conclusions.
 
