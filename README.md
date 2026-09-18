@@ -54,15 +54,17 @@ Do not infer missing support or browse for new evidence unless I explicitly ask.
 
 The canonical instructions are in [`SKILL.md`](SKILL.md). The JSON Schema defines the machine-readable output contract. The examples show how findings should be reasoned and reported. The eval files contain five portable benchmark cases and their expected results.
 
-## Use with Claude Code, Codex, and Gemini CLI
+## Use with Claude Code, Codex, and Antigravity CLI
 
 EvidenceGuard is file-based and does not depend on a proprietary runtime.
 
 - **Claude Code:** place or link this directory within the working project, ask Claude Code to read `SKILL.md`, and provide the target material and evidence in the same task context.
 - **Codex:** keep the directory in the workspace or an available skills location, then instruct Codex to use `SKILL.md` for the audit. If automatic skill discovery is not configured, reference the file explicitly.
-- **Gemini CLI:** keep the directory in the working project and ask Gemini CLI to follow `SKILL.md` while auditing the supplied files. Use explicit file references where local skill discovery differs.
+- **Antigravity CLI:** keep the directory in the working project and ask Antigravity CLI to follow `SKILL.md` while auditing the supplied files. Use explicit file references where local skill discovery differs. In headless mode, grant only the scoped `read_file` permission needed for the EvidenceGuard directory rather than bypassing all tool permissions.
 
 Exact discovery and installation conventions vary by tool and version. The portable baseline is manual, file-based use: make `SKILL.md`, the schema, the target material, and its evidence available in context. No tool-specific commands are required by EvidenceGuard V0.1.
+
+Google ended consumer-account access to Gemini CLI through **Sign in with Google** on 18 June 2026 and directs those users to Antigravity CLI. Gemini CLI remains available in supported Standard, Enterprise, Google Cloud, Vertex AI, or API-key-backed configurations. See Google's [deprecation notice](https://developers.google.com/gemini-code-assist/docs/deprecations/code-assist-individuals) and [transition announcement](https://developers.googleblog.com/en/an-important-update-transitioning-gemini-cli-to-antigravity-cli/).
 
 ## Output at a glance
 
@@ -80,4 +82,3 @@ A clean audit means no material integrity issue was found in the supplied materi
 ## Version boundary
 
 V0.1 audits claim–evidence integrity from materials supplied in the task. It does not retrieve sources, score source reputation with a universal ranking, validate legal compliance, or authorize external release.
-
