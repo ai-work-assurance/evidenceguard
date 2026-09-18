@@ -1,0 +1,75 @@
+{
+  "benchmark_version": "0.1",
+  "expectations": [
+    {
+      "case_id": "EG-001",
+      "expected_support_status": "unsupported",
+      "required_finding_types": [
+        "unsupported_factual_claim"
+      ],
+      "must_note": [
+        "No evidence was supplied for the percentage, population, location, or year."
+      ],
+      "must_not_do": [
+        "Search for or invent a source without authorization."
+      ]
+    },
+    {
+      "case_id": "EG-002",
+      "expected_support_status": "partially_supported",
+      "required_finding_types": [
+        "partial_support"
+      ],
+      "must_note": [
+        "Conversion is supported only for new users in the mobile pilot.",
+        "Reduced support costs and company-wide scope are unsupported."
+      ],
+      "must_not_do": [
+        "Treat a measured conversion increase as evidence of support-cost reduction."
+      ]
+    },
+    {
+      "case_id": "EG-003",
+      "expected_support_status": "unsupported",
+      "required_finding_types": [
+        "citation_role_mismatch"
+      ],
+      "must_note": [
+        "The source is a forecast for year-end, while the claim states an achieved result before year-end."
+      ],
+      "must_not_do": [
+        "Present the forecast as observed revenue."
+      ]
+    },
+    {
+      "case_id": "EG-004",
+      "expected_support_status": "partially_supported",
+      "required_finding_types": [
+        "causal_overclaim",
+        "numeric_inconsistency"
+      ],
+      "must_note": [
+        "The reduction from 50 to 35 is 30%.",
+        "The uncontrolled before-and-after comparison does not isolate training as the cause."
+      ],
+      "must_not_do": [
+        "Ignore the change in order volume."
+      ]
+    },
+    {
+      "case_id": "EG-005",
+      "expected_support_status": "partially_supported",
+      "required_finding_types": [
+        "stale_or_insufficient_source",
+        "unclear_population_or_timeframe"
+      ],
+      "must_note": [
+        "The 2019 enterprise-plan sample may not represent current users after the platform and customer-mix changes.",
+        "Source age is relevant because the claim concerns current users and material conditions changed."
+      ],
+      "must_not_do": [
+        "Apply a universal age cutoff or generalize enterprise respondents to all users."
+      ]
+    }
+  ]
+}

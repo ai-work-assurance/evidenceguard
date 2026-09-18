@@ -1,0 +1,77 @@
+{
+  "benchmark_version": "0.1",
+  "cases": [
+    {
+      "case_id": "EG-001",
+      "title": "Unsupported adoption claim",
+      "target_claim": "Seventy percent of local retailers adopted AI inventory tools in 2025.",
+      "evidence": [],
+      "context": {
+        "document_date": "2026-02-01",
+        "notes": "No source or dataset was supplied."
+      }
+    },
+    {
+      "case_id": "EG-002",
+      "title": "Compound claim with narrower evidence",
+      "target_claim": "The pilot increased conversion and reduced support costs across the company.",
+      "evidence": [
+        {
+          "evidence_id": "E-002-A",
+          "content": "In the mobile pilot for new users, conversion rose from 4.0% to 4.8%. Support costs and other business units were not measured.",
+          "role": "observed_result"
+        }
+      ],
+      "context": {
+        "notes": "The target generalizes beyond the measured metric and population."
+      }
+    },
+    {
+      "case_id": "EG-003",
+      "title": "Forecast cited as actual",
+      "target_claim": "Revenue reached USD 50 million in 2026.",
+      "evidence": [
+        {
+          "evidence_id": "E-003-A",
+          "content": "Management forecasts revenue of USD 50 million for the year ending 31 December 2026.",
+          "role": "forecast"
+        }
+      ],
+      "context": {
+        "document_date": "2026-06-30"
+      }
+    },
+    {
+      "case_id": "EG-004",
+      "title": "Causal and numeric overstatement",
+      "target_claim": "Training caused complaints to fall by 40%, from 50 cases to 35 cases.",
+      "evidence": [
+        {
+          "evidence_id": "E-004-A",
+          "content": "Complaints were 50 in the month before training and 35 in the month after. No control group was used, and order volume fell during the second month.",
+          "role": "observed_result"
+        }
+      ],
+      "context": {
+        "notes": "The raw-count reduction is 30%, not 40%."
+      }
+    },
+    {
+      "case_id": "EG-005",
+      "title": "Old source and undefined current population",
+      "target_claim": "Most current platform users prefer email support.",
+      "evidence": [
+        {
+          "evidence_id": "E-005-A",
+          "content": "A 2019 survey found 58% of 220 enterprise-plan respondents preferred email support. The platform and customer mix were substantially redesigned in 2024.",
+          "role": "observed_result"
+        }
+      ],
+      "context": {
+        "document_date": "2026-03-01",
+        "notes": "No current-user definition or freshness threshold was supplied."
+      }
+    }
+  ]
+}
+
